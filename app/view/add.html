@@ -75,7 +75,7 @@
             <fieldset>
             <legend>DISCIPLESHIP GROUP PROFILE</legend>
             </fieldset>
-            
+
             <label>I AM A</label>
             <div class="form-group">
              <input type="checkbox" id="DGROUP MEMBER" value="DGROUP MEMBER"><label for="DGROUP MEMBER"> DGROUP MEMBER </label><br>
@@ -87,7 +87,7 @@
 
             <div class="form-group">
             <select class="form-control" ng-model="workers.dtype">
-             <option value="" disabled selected>SELECT D-GROUP TYPE</option>
+             <option disabled selected>SELECT D-GROUP TYPE</option>
              <option>Couples</option>
              <option>Youth-Ladies</option>
              <option>Youth-Men</option>
@@ -135,7 +135,9 @@
             <div class="form-group">
             AREA PASTOR:  <input class="form-control" placeholder="AREA PASTOR" ng-model="workers.apastor" ng-change="noSpace()">
             </div>
-            <legend>DGROUP PROFILE OF HT WORKER AS A DGROUP LEADER</legend>
+
+
+            <h4>DGROUP PROFILE OF HT WORKER AS A DGROUP LEADER</h4>
             <div class="form-group">
 
             <label for="dhandletype">DGROUP TYPE</label>
@@ -174,10 +176,12 @@
             <div class="form-group">
             VENUE:  <input class="form-control" placeholder="VENUE" ng-model="workers.dhandlevenue" ng-change="noSpace()">
             </div>
+            <hr>
             <div class="form-group">
             OTHER MINISTRY:  <input class="form-control" placeholder="OTHER MINISTRY" ng-model="workers.oministry" ng-change="noSpace()">
             </div>
-            <legend>HOST TEAM GROUP PROFILE</legend>
+            <h4>HOST TEAM GROUP PROFILE</h4>
+            <hr>
             <div class="form-group">
             BACKGROUND IN USHERING PRIOR TO JOINING HOST TEAM MINISTRY
             (LAST ATTENDED)  <input class="form-control" placeholder="BACKGROUND IN USHERING" ng-model="workers.pastministry" ng-change="noSpace()">
@@ -192,10 +196,11 @@
             DATE of First Ushering Duty Day:    <input type="date" class="form-control" placeholder="MM/DD/YYYY" ng-model="workers.firstduty" ng-change="noSpace()">
 
             </div>
+
             <div class="form-group">
             <label for="clustername">CLUSTER NAME</label>
             <select class="form-control" id="clustername" ng-model="workers.clustername">
-            <option value="" disabled selected>Select CLUSTER NAME</option>
+            <option disabled selected>Select CLUSTER NAME</option>
             <option>PEOPLE MOVEMENT</option>
             <option>RTE</option>
             </select>
