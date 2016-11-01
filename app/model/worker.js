@@ -82,7 +82,7 @@ var workerSchema = mongoose.Schema({
     htposition:{
         id: Number,
         name: String
-    }
+    },
     updated: {
         type: Date
     },
