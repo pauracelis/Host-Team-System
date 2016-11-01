@@ -75,16 +75,26 @@
             <fieldset>
             <legend>DISCIPLESHIP GROUP PROFILE</legend>
             </fieldset>
-
+            
             <label>I AM A</label>
             <div class="form-group">
-            <label ng-repeat="group in dgroup"><input type="checkbox" checklist-model="selected.dgroup" checklist-value="group"  /> {{group.name}}<br/> </label>
-            {{selected.group}}   
+             <input type="checkbox" id="DGROUP MEMBER" value="DGROUP MEMBER"><label for="DGROUP MEMBER"> DGROUP MEMBER </label><br>
+             <input type="checkbox" id="DGROUP LEADER" value="DGROUP LEADER"><label for="DGROUP LEADER"> DGROUP LEADER </label><br>
+             <input type="checkbox" id="D12 LEADER" value="D12 LEADER"><label for="D12 LEADER"> D12 LEADER </label><br>
+            </form>
             </div>
+
+
             <div class="form-group">
-            <select class="form-control" ng-model="itemSelected" ng-options="value.name as value.name for value in dtype" required>
-            <option value="" disabled selected>SELECT D-GROUP TYPE</option>
-            </select>      
+            <select class="form-control" ng-model="workers.dtype">
+             <option value="" disabled selected>SELECT D-GROUP TYPE</option>
+             <option>Couples</option>
+             <option>Youth-Ladies</option>
+             <option>Youth-Men</option>
+             <option>All Men</option>
+             <option>All Women</option>
+             <option>Mixed</option>
+             </select>
             </div>
 
             <div class="form-group">
@@ -101,15 +111,22 @@
 
             <div class="form-group">
             <label for="dgrouptype">DGROUP DAY</label>
-            <select class="form-control" id="dgrouptype" ng-model="itemSelected2" ng-options= "value.name as value.name for value in dschedday">
-            <option value="" disabled selected>Select DAY</option>
+            <select class="form-control" id="dgrouptype" ng-model="workers.dschedday">
+            <option disabled selected>Select DAY</option>
+            <option>MONDAY</option>
+            <option>TUESDAY</option>
+            <option>WEDNESDAY</option>
+            <option>THURSDAY</option>
+            <option>FRIDAY</option>
+            <option>SATURDAY</option>
+            <option>SUNDAY</option>
             </select>
             </div>
 
 
-            <div class="input-group bootstrap-timepicker timepicker">
-            DGROUP time:<input id="timepicker1" type="text" class="form-control input-small">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+            <div class="form-group">
+            DGROUP TIME:  <input class="form-control" placeholder="DGROUP TIME" ng-model="workers.dtime" ng-change="noSpace()">
+            </div>
 
             </div>
             <div class="form-group">
@@ -122,22 +139,35 @@
             <div class="form-group">
 
             <label for="dhandletype">DGROUP TYPE</label>
-            <select class="form-control" id="dhandletype" ng-model="itemSelected3" ng-options="value.name as value.name for value in dhandletype">
-            <option value="" disabled selected>Select DGROUP</option>
+            <select class="form-control" id="dhandletype" ng-model="workers.dhandletype">
+            <option disabled selected>Select DGROUP</option>
+            <option>Couples</option>
+            <option>Youth-Ladies</option>
+            <option>Youth-Men</option>
+            <option>All Men</option>
+            <option>All Women</option>
+            <option>Mixed</option>
             </select>
             </div>
 
             <div class="form-group">
             <label for="dhandleday">DGROUP DAY</label>
-            <select class="form-control" id="dhandleday" ng-model="itemSelected4" ng-options="value.name as value.name for value in dhandleday">
-            <option value="" disabled selected>Select DAY</option>
+            <select class="form-control" id="dhandleday" ng-model="workers.dhandleday">
+            <option disabled selected>Select DAY</option>
+            <option>MONDAY</option>
+            <option>TUESDAY</option>
+            <option>WEDNESDAY</option>
+            <option>THURSDAY</option>
+            <option>FRIDAY</option>
+            <option>SATURDAY</option>
+            <option>SUNDAY</option>
+
             </select>
             </div>  
 
 
-            <div class="input-group bootstrap-timepicker timepicker">
-            DGROUP time:<input id="dhandletime" type="text" class="form-control input-small">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+           <div class="form-group">
+            TIME:  <input class="form-control" placeholder="TIME" ng-model="workers.dhandletime" ng-change="noSpace()">
             </div>
 
 
@@ -164,8 +194,10 @@
             </div>
             <div class="form-group">
             <label for="clustername">CLUSTER NAME</label>
-            <select class="form-control" id="clustername" ng-model="itemSelected5" ng-options="value.name as value.name for value in clustername">
+            <select class="form-control" id="clustername" ng-model="workers.clustername">
             <option value="" disabled selected>Select CLUSTER NAME</option>
+            <option>PEOPLE MOVEMENT</option>
+            <option>RTE</option>
             </select>
             </div>
 
@@ -181,15 +213,18 @@
             <div class="form-group">
             SEGMENT Team Leader:  <input class="form-control" placeholder=" SEGMENT Team Leader:" ng-model="workers.segmentleader" ng-change="noSpace()">
             </div>
-            <div class="input-group bootstrap-timepicker timepicker">
-            Time:<input id="timepicker1" type="text" class="form-control input-small">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+            <div class="form-group">
+            TIME:  <input class="form-control" placeholder=" TIME:" ng-model="workers.time" ng-change="noSpace()">
             </div>
             <div class="form-group">
             
             <label for="htposition">HT Position</label>
-            <select class="form-control" id="htposition" ng-model="itemSelected6" ng-options="value.name as value.name for value in htposition">
+            <select class="form-control" id="htposition" ng-model="workers.htposition"">
             <option value="" disabled selected>Select POSITION</option>
+            <option>CLUSTER HEAD</option>
+            <option>SEGMENT HEAD</option>
+            <option>TEAM LEADER</option>
+            <option>MEMBER</option>
             </select>
             </div>
             <div class="form-group">

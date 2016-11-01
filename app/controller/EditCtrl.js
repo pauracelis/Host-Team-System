@@ -22,7 +22,6 @@ angular.module('app').controller('EditController', function($scope, $http, $loca
             console.log('Error: ' + status);
         });
     };
-
     // $scope.noSpace = function() {
     //     $scope.workers.fname = $scope.workers.fname.split(' ').join('');
     //     $scope.workers.lname = $scope.workers.lname.split(' ').join('');

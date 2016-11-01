@@ -27,38 +27,21 @@ var workerSchema = mongoose.Schema({
     efname: String,
     relationship: String,
     econtact: Number,
-    dgroup: [{
-        id: Number,
-        name:String
-    }],
+    dgroup:String,
     dlname: String,
     dfname: String,
     dminitial: String,
     dcontact: Number,
-    dtype: {
-        id: Number,
-        name: String
-    },
-    dschedday: {
-        id: Number,
-        name: String
-    },
-    dtime:{
-        type: Date
-    },
+    dtype: [
+
+    ],
+    dschedday: String,
+    dtime:String,
     dvenue: String, 
     apastor: String,
-    dhandletype: {
-        id: Number,
-        name: String
-    },
-    dhandleday: {
-         id: Number,
-        name: String
-    },
-    dhandletime:{
-        type: Date
-    },
+    dhandletype: String,
+    dhandleday: String,
+    dhandletime:String,
     dhandlevenue: String,
     oministry: String,
     pastministry: String,
@@ -68,21 +51,13 @@ var workerSchema = mongoose.Schema({
     firstduty: {
         type: Date
     },
-    clustername: {
-        id: Number,
-        name: String
-    },   
+    clustername: String,   
     clusterhead: String,
     segment: String,
     segmenthead: String,
     segmentleader: String,
-    time: {
-        type: Date
-    },
-    htposition:{
-        id: Number,
-        name: String
-    },
+    time:String,
+    htposition:String,
     updated: {
         type: Date
     },
