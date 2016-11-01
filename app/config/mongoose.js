@@ -8,4 +8,4 @@ db.once('open', function callback() {
     console.log('(htsystem) db opened');
 });
 
-workerModel.createDefaultWorkers();
+// workerModel.createDefaultWorkers();

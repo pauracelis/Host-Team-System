@@ -4,11 +4,145 @@
     <form name="updateWorkerForm">
         <fieldset>
             <div class="form-group">
-                <input class="form-control" placeholder="First Name" ng-model="workers.fname" ng-change="noSpace()" required>
+                <input class="form-control" placeholder="FIRST NAME" ng-model="workers.fname" ng-change="noSpace()" required>
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Last Name" ng-model="workers.lname" ng-change="noSpace()">
+                <input class="form-control" placeholder="LAST NAME" ng-model="workers.lname" ng-change="noSpace()">
             </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="NICKNAME" ng-model="workers.nickname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="GENDER" ng-model="workers.gender" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="CIVIL STATUS" ng-model="workers.cstatus" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="CELLPHONE" ng-model="workers.cellphone" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="TELEPHONE" ng-model="workers.telnumber" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <!-- edit with drop down or check box -->
+            <input class="form-control" placeholder="BIRTHDAY" ng-model="workers.bday" ng-change="noSpace()">
+            </div> 
+            <div class="form-group">
+            <input class="form-control" placeholder="AGE" ng-model="workers.age" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="EMAIL ADDRESS" ng-model="workers.emailadd" ng-change="noSpace()">
+            </div>   
+            <div class="form-group">
+            <input class="form-control" placeholder="HOME ADDRESS" ng-model="workers.homeaddress" ng-change="noSpace()">
+            </div>     
+            <div class="form-group">
+            <input class="form-control" placeholder="PROFESSION" ng-model="workers.profession" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="COMPANY" ng-model="workers.company" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="TALENT" ng-model="workers.talent" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="MEDICAL" ng-model="workers.medical" ng-change="noSpace()">
+            </div>
+            <legend>EMERGENCY CONTACT</legend>
+            <div class="form-group">
+            <input class="form-control" placeholder="LAST NAME" ng-model="workers.elname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="FIRST NAME" ng-model="workers.efname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="RELATIONSHIP" ng-model="workers.relationship" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="CONTACT" ng-model="workers.econtact" ng-change="noSpace()">
+            </div>
+            <legend>DGROUP PROFILE</legend>
+            <div class="form-group">
+       <!--      <input class="form-control" placeholder="DGROUP" ng-model="workers.dgroup" checklist-model="selected.dgroup" ng-change="selected()" checklist-value="group" > -->
+            <!-- <select class="form-control" id="dgrouptype" ng-model="workers.dgroup"> -->
+
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="LAST NAME" ng-model="workers.dlname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="FIRST NAME" ng-model="workers.dfname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="MIDDLE INITIAL" ng-model="workers.dminitial" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="CONTACT" ng-model="workers.dcontact" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="DGROUP TYPE" ng-model="workers.dtype" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="DAY" ng-model="workers.dschedday" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="TIME" ng-model="workers.dtime" ng-change="noSpace()">
+            </div>                                               
+            <div class="form-group">
+            <input class="form-control" placeholder="VENUE" ng-model="workers.dvenue" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="AREA PASTOR" ng-model="workers.apastor" ng-change="noSpace()">
+            </div>        
+            <legend>DGROUP PROFILE OF HT WORKER AS A DGROUP LEADER</legend>
+            <div class="form-group">
+            <input class="form-control" placeholder="HANDLED DGROUP TYPE" ng-model="workers.dhandletype" ng-change="noSpace()">
+            </div>          
+            <div class="form-group">
+            <input class="form-control" placeholder="DAY" ng-model="workers.dhandleday" ng-change="noSpace()">
+            </div>    
+            <div class="form-group">
+            <input class="form-control" placeholder="TIME" ng-model="workers.dhandletime" ng-change="noSpace()">
+            </div> 
+            <div class="form-group">
+            <input class="form-control" placeholder="VENUE" ng-model="workers.dhandlevenue" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="OTHER MINISTRY" ng-model="workers.oministry" ng-change="noSpace()">
+            </div>  
+            <legend>HOST TEAM GROUP PROFILE</legend>
+            <div class="form-group">
+            <input class="form-control" placeholder="BACKGROUND IN USHERING PRIOR TO JOINING HOST TEAM MINISTRY
+            (LAST ATTENDED)" ng-model="workers.pastministry" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="New Worker Orientation Training Completion Date" ng-model="workers.trainingdate" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="DATE of First Ushering Duty Day" ng-model="workers.firstduty" ng-change="noSpace()">
+            </div>  
+            <div class="form-group">
+            <input class="form-control" placeholder="CLUSTER NAME" ng-model="workers.clustername" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="CLUSTER HEAD" ng-model="workers.clusterhead" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="SEGMENT" ng-model="workers.segment" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="SEGMENT HEAD" ng-model="workers.segmenthead" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <input class="form-control" placeholder="SEGMENT LEADER" ng-model="workers.segmentleader" ng-change="noSpace()">
+            </div>  
+            <div class="form-group">
+            <input class="form-control" placeholder="TIME" ng-model="workers.time" ng-change="noSpace()">
+            </div> 
+            <div class="form-group">
+            <input class="form-control" placeholder="HT POSITION" ng-model="workers.htposition" ng-change="noSpace()">
+            </div>                
             <div class="form-group">
                 <div class="pull-right">
                     <button class="btn btn-default" ng-click="cancel()"><i class="fa fa-ban"></i> Cancel</button>

@@ -1,13 +1,202 @@
 <div class="well">
     <h1>{{title}}</h1>
-
     <form name="addWorkerForm">
         <fieldset>
             <div class="form-group">
-                <input class="form-control" placeholder="First Name" ng-model="workers.fname" ng-change="noSpace()" required>
+            LAST NAME:    <input class="form-control" placeholder="LAST NAME" ng-model="workers.lname" ng-change="noSpace()">
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Last Name" ng-model="workers.lname" ng-change="noSpace()">
+            FIRST NAME:  <input class="form-control" placeholder="FIRST NAME" ng-model="workers.fname" required>
+            </div>
+            <div class="form-group">
+            NICKNAME:<input class="form-control" placeholder="NICKNAME" ng-model="workers.nickname" ng-change="noSpace()">
+            </div>
+            GENDER:   
+            <div class="form-check">
+            <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" ng-model="workers.gender" id="" value="Male" checked>
+            MALE
+            </label>
+            </div>
+            <div class="form-check">
+            <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" ng-model="workers.gender" id="Female" value="Female">
+            FEMALE
+            </label>
+            </div>
+            <div class="form-group">
+            CIVIL STATUS:    <input class="form-control" placeholder="CIVIL STATUS" ng-model="workers.cstatus" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            MOBILE PHONE:    <input class="form-control" placeholder="MOBILE PHONE" ng-model="workers.cellphone" ng-change="noSpace()" maxlength="12">
+            </div>
+            <div class="form-group">
+            TELEPHONE:    <input class="form-control" placeholder="TELEPHONE" ng-model="workers.telnumber" ng-change="noSpace()">
+            </div>
+             <div class="form-group">
+            BIRTHDATE:    <input type="date" class="form-control" placeholder="MM/DD/YYYY" ng-model="workers.bday" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            AGE:    <input class="form-control" placeholder="AGE" ng-model="workers.age" ng-change="noSpace()" maxlength="2">
+            </div>
+            <div class="form-group">
+            EMAIL ADDRESS:  <input type= "email" class="form-control" placeholder="you@email.com" ng-model="workers.emailadd" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            HOME ADDRESS:  <input class="form-control" placeholder="HOME ADDRESS" ng-model="workers.homeaddress" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            PROFESSION:  <input class="form-control" placeholder="PROFESSION" ng-model="workers.profession" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            COMPANY/BUSINESS:  <input class="form-control" placeholder="COMPANY/BUSINESS" ng-model="workers.company" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            TALENT:  <input class="form-control" placeholder="TALENT" ng-model="workers.talent" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            ANY KNOWN MEDICAL CONDITION:  <input class="form-control" placeholder="ANY KNOWN MEDICAL CONDITION" ng-model="workers.medical" ng-change="noSpace()">
+            </div>
+            <fieldset>
+            <legend>CONTACT PERSON IN CASE OF EMERGENCY</legend>
+            </fieldset>
+            <div class="form-group">
+            LAST NAME:  <input class="form-control" placeholder="LAST NAME" ng-model="workers.elname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            FIRST NAME:  <input class="form-control" placeholder="FIRST NAME" ng-model="workers.efname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            RELATIONSHIP:  <input class="form-control" placeholder="RELATIONSHIP" ng-model="workers.relationship" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            CONTACT:    <input class="form-control" placeholder="CELLPHONE" ng-model="workers.econtact" ng-change="noSpace()" maxlength="12">
+            </div>
+            <fieldset>
+            <legend>DISCIPLESHIP GROUP PROFILE</legend>
+            </fieldset>
+
+            <label>I AM A</label>
+            <div class="form-group">
+            <label ng-repeat="group in dgroup"><input type="checkbox" checklist-model="selected.dgroup" checklist-value="group"  /> {{group.name}}<br/> </label>
+            {{selected.dgroup}}   
+            </div>
+            <div class="form-group">
+            <select ng-model="itemSelected" ng-options="value.name as value.name for value in dtype" required>
+            <option value="" disabled selected>SELECT D-GROUP TYPE</option>
+            </select>      
+            </div>
+
+            <div class="form-group">
+            LAST NAME:  <input class="form-control" placeholder="LAST NAME" ng-model="workers.dlname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            FIRST NAME:  <input class="form-control" placeholder="FIRST NAME" ng-model="workers.dfname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            MIDDLE INITIAL  <input class="form-control" placeholder="MIDDLE INITIAL" ng-model="workers.dminitial" ng-change="noSpace()" maxlength="1"> 
+            </div>
+            <div class="form-group">
+            DGROUP LEADER'S CONTACT:    <input class="form-control" placeholder="CELLPHONE" ng-model="workers.dcontact" ng-change="noSpace()" maxlength="12">
+
+            <div class="form-group">
+            <label for="dgrouptype">DGROUP DAY</label>
+            <select class="form-control" id="dgrouptype" ng-model="workers.dschedday">
+            <option value="" disabled selected>Select DAY</option>
+            </select>
+            </div>
+
+
+            <div class="input-group bootstrap-timepicker timepicker">
+            DGROUP time:<input id="timepicker1" type="text" class="form-control input-small">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+            </div>
+            <div class="form-group">
+            VENUE:  <input class="form-control" placeholder="VENUE" ng-model="workers.dvenue" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            AREA PASTOR:  <input class="form-control" placeholder="AREA PASTOR" ng-model="workers.apastor" ng-change="noSpace()">
+            </div>
+            <legend>DGROUP PROFILE OF HT WORKER AS A DGROUP LEADER</legend>
+            <div class="form-group">
+            <label for="dhandletype">DGROUP TYPE</label>
+            <select class="form-control" id="dhandletype" ng-model="workers.dhandletype">
+            <option value="" disabled selected>Select DGROUP</option>
+            <option>Couples</option>
+            <option>Youth-Ladies</option>
+            <option>Youth-Men</option>
+            <option>All Men</option>
+            <option>All Women</option>
+            <option>Mixed</option>
+            </select>
+            </div>
+            <div class="form-group">
+            <label for="dhandleday">DGROUP DAY</label>
+            <select class="form-control" id="dhandleday" ng-model="workers.dhandleday">
+            <option value="" disabled selected>Select DAY</option>
+            <option>MONDAY</option>
+            <option>TUESDAY</option>
+            <option>WEDNESDAY</option>
+            <option>THURSDAY</option>
+            <option>FRIDAY</option>
+            <option>SATURDAY</option>
+            <option>SUNDAY</option>
+            </select>
+            </div>  
+            <div class="input-group bootstrap-timepicker timepicker">
+            DGROUP time:<input id="dhandletime" type="text" class="form-control input-small">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+            </div>
+            <div class="form-group">
+            VENUE:  <input class="form-control" placeholder="VENUE" ng-model="workers.dhandlevenue" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            OTHER MINISTRY:  <input class="form-control" placeholder="OTHER MINISTRY" ng-model="workers.oministry" ng-change="noSpace()">
+            </div>
+            <legend>HOST TEAM GROUP PROFILE</legend>
+            <div class="form-group">
+            BACKGROUND IN USHERING PRIOR TO JOINING HOST TEAM MINISTRY
+            (LAST ATTENDED)  <input class="form-control" placeholder="BACKGROUND IN USHERING" ng-model="workers.pastministry" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            New Worker Orientation Training Completion Date:    <input type="date" class="form-control" placeholder="MM/DD/YYYY" ng-model="workers.trainingdate" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            DATE of First Ushering Duty Day:    <input type="date" class="form-control" placeholder="MM/DD/YYYY" ng-model="workers.firstduty" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            <label for="clustername">CLUSTER NAME</label>
+            <select class="form-control" id="clustername" ng-model="workers.clustername">
+            <option value="" disabled selected>Select CLUSTER NAME</option>
+            <option>PEOPLE MOVEMENT</option>
+            <option>RTE</option>
+            </select>
+            </div>
+            <div class="form-group">
+            CLUSTER HEAD  <input class="form-control" placeholder="CLUSTER HEAD" ng-model="workers.clusterhead" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            SEGMENT:  <input class="form-control" placeholder="SEGMENT" ng-model="workers.segment" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            SEGMENT Head:  <input class="form-control" placeholder="SEGMENT Head:" ng-model="workers.segmenthead" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+            SEGMENT Team Leader:  <input class="form-control" placeholder=" SEGMENT Team Leader:" ng-model="workers.segmentleader" ng-change="noSpace()">
+            </div>
+            <div class="input-group bootstrap-timepicker timepicker">
+            Time:<input id="timepicker1" type="text" class="form-control input-small">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+            </div>
+            <div class="form-group">
+            <label for="htposition">HT Position</label>
+            <select class="form-control" id="htposition" ng-model="workers.htposition">
+            <option value="" disabled selected>Select POSITION</option>
+            <option>CLUSTER HEAD</option>
+            <option>SEGMENT HEAD</option>
+            <option>TEAM LEADER</option>
+            <option>MEMBER</option>
+            </select>
             </div>
             <div class="form-group">
                 <div class="pull-right">

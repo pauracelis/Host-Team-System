@@ -1,13 +1,13 @@
 {
   "name": "crud",
   "version": "1.0.0",
-  "description": "MEAN app",
+  "description": "HT Registration",
   "main": "server.js",
-  "author": "thelittletechie",
+  "author": "racelpa",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
-    "mongoose": "^4.4.9"
+    "mongoose": "~4.1.12"
   }
 }

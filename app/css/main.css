@@ -5,3 +5,8 @@ body {
 .table-list tr {
     cursor: pointer;
 }
+
+.hero {
+  background-color: #2ba6cb;
+  padding: 0 90px;
+}

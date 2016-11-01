@@ -1,9 +1,9 @@
 {
   "name": "crud",
-  "description": "MEAN app",
+  "description": "HT Registration System",
   "main": "server.js",
   "authors": [
-    "thelittletechie"
+    "racelpa"
   ],
   "license": "ISC",
   "private": true,
