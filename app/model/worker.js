@@ -68,7 +68,10 @@ var workerSchema = mongoose.Schema({
     firstduty: {
         type: Date
     },
-    clustername: String,
+    clustername: {
+        id: Number,
+        name: String
+    },   
     clusterhead: String,
     segment: String,
     segmenthead: String,
@@ -76,7 +79,10 @@ var workerSchema = mongoose.Schema({
     time: {
         type: Date
     },
-    htposition: String,
+    htposition:{
+        id: Number,
+        name: String
+    }
     updated: {
         type: Date
     },

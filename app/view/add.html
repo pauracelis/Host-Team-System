@@ -78,8 +78,8 @@
 
             <label>I AM A</label>
             <div class="form-group">
-            <label ng-repeat="group in dgroup"><input type="checkbox" checklist-model="selected.workers.dgroup" checklist-value="group"  /> {{group.name}}<br/> </label>
-            {{selected.dgroup}}   
+            <label ng-repeat="group in dgroup"><input type="checkbox" checklist-model="selected.dgroup" checklist-value="group"  /> {{group.name}}<br/> </label>
+            {{selected.group}}   
             </div>
             <div class="form-group">
             <select class="form-control" ng-model="itemSelected" ng-options="value.name as value.name for value in dtype" required>
@@ -164,12 +164,11 @@
             </div>
             <div class="form-group">
             <label for="clustername">CLUSTER NAME</label>
-            <select class="form-control" id="clustername" ng-model="workers.clustername">
+            <select class="form-control" id="clustername" ng-model="itemSelected5" ng-options="value.name as value.name for value in clustername">
             <option value="" disabled selected>Select CLUSTER NAME</option>
-            <option>PEOPLE MOVEMENT</option>
-            <option>RTE</option>
             </select>
             </div>
+
             <div class="form-group">
             CLUSTER HEAD  <input class="form-control" placeholder="CLUSTER HEAD" ng-model="workers.clusterhead" ng-change="noSpace()">
             </div>
@@ -187,13 +186,10 @@
             <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
             </div>
             <div class="form-group">
+            
             <label for="htposition">HT Position</label>
-            <select class="form-control" id="htposition" ng-model="workers.htposition">
+            <select class="form-control" id="htposition" ng-model="itemSelected6" ng-options="value.name as value.name for value in htposition">
             <option value="" disabled selected>Select POSITION</option>
-            <option>CLUSTER HEAD</option>
-            <option>SEGMENT HEAD</option>
-            <option>TEAM LEADER</option>
-            <option>MEMBER</option>
             </select>
             </div>
             <div class="form-group">

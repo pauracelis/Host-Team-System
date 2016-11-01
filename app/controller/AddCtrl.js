@@ -47,6 +47,19 @@ angular.module('app').controller('AddController', function($scope, $http, $locat
         {id:7, name:'SUNDAY', disabled:false}
 
     ];
+
+    $scope.clustername = [
+        {id:1, name:'PEOPLE MOVEMENT', disabled: false},
+        {id:2, name:'RTE', disabled: false}
+    ];
+
+    $scope.htposition = [
+        {id:1, name:'CLUSTER HEAD', disabled: false},
+        {id:2, name:'SEGMENT HEAD', disabled: false},
+        {id:3, name:'TEAM LEADER', disabled:false},
+        {id:4, name:'MEMBER', disabled:false},
+    ];
+
     $scope.selected = {
             dgroup: []
     };
@@ -55,7 +68,8 @@ angular.module('app').controller('AddController', function($scope, $http, $locat
     $scope.itemSelected2 = $scope.dschedday[0];
     $scope.itemSelected3 = $scope.dhandletype[0];
     $scope.itemSelected4 = $scope.dhandleday[0];
-
+    $scope.itemSelected5 = $scope.clustername[0];
+    $scope.itemSelected6 = $scope.htposition[0];
 
     $scope.save = function() {
         $http.post('/api', $scope.workers).success(function(data) {

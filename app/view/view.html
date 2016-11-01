@@ -2,7 +2,7 @@
     <h1>{{title}}</h1>
     <hr>
     <table class="table table-bordered">
-    <h3>PERSONAL INFORMATION</h3>
+    <h4>PERSONAL INFORMATION</h4>
         <tr>
             <td>FIRST NAME:</td>
             <td>{{workers.fname}}</td>
@@ -63,48 +63,140 @@
             <td>MEDICAL:</td>
             <td>{{workers.medical}}</td>
         </tr>
-    <!-- <legend>CONTACT PERSON IN CASE OF EMERGENCY</legend>
+        </table>
+        <table class="table table-bordered">
+        <h4>CONTACT PERSON IN CASE OF EMERGENCY</h4>
+           <hr>
          <tr>
             <td>LAST NAME:</td>
-            <td>{{elname.elname}}</td>
+            <td>{{workers.elname}}</td>
         </tr>  
          <tr>
             <td>FIRST NAME:</td>
-            <td>{{elname.efname}}</td>
+            <td>{{workers.efname}}</td>
         </tr>
          <tr>
             <td>RELATIONSHIP:</td>
-            <td>{{elname.relationship}}</td>
+            <td>{{workers.relationship}}</td>
         </tr>    
          <tr>
             <td>CONTACT:</td>
-            <td>{{elname.econtact}}</td>
+            <td>{{workers.econtact}}</td>
         </tr>         
-    <legend>DISCIPLESHIP GROUP PROFILE</legend>
+                           
+    </table>
+    <table class="table table-bordered">
+   <h4>DGROUP PROFILE</h4>     
+   <hr>
         <tr>
-            <td>I AM A</td>
-            <td>workers.type.member</td>
-            <td>workers.type.leader</td>
-            <td>workers.type.leader</td>
+            <td> I AM A </td>
+            <td>{{workers.dgroup}}</td>
         </tr>
         <tr>
             <td>LAST NAME:</td>
-            <td>{{elname.dlname}}</td>
-        </tr>   
+            <td>{{workers.dlname}}</td>
+        </tr>
         <tr>
             <td>FIRST NAME:</td>
-            <td>{{elname.dfname}}</td>
+            <td>{{workers.dfname}}</td>
         </tr>
         <tr>
             <td>MIDDLE INITIAL:</td>
-            <td>{{elname.dminitial}}</td>
+            <td>{{workers.dminitial}}</td>
         </tr>
         <tr>
             <td>CONTACT NUMBER:</td>
-            <td>{{elname.dcontact}}</td>
-        </tr>                        -->
+            <td>{{workers.dcontact}}</td>
+        </tr> 
+        <tr>
+            <td>DGROUP TYPE:</td>
+            <td>{{workers.dtype}}</td>
+        </tr>
+        <tr>
+            <td>DGROUP DAY:</td>
+            <td>{{workers.dschedday}}</td>
+        </tr>  
+        <tr>
+            <td>DGROUP TIME:</td>
+            <td>{{workers.dtime}}</td>
+        </tr>
+        <tr>
+            <td>DGROUP VENUE:</td>
+            <td>{{workers.dvenue}}</td>
+        </tr>
+        <tr>
+            <td>AREA PASTOR:</td>
+            <td>{{workers.apastor}}</td>
+        </tr>        
     </table>
-
+    <table class="table table-bordered">
+        <h4>DGROUP PROFILE OF HT WORKER AS A DGROUP LEADER</h4>
+        <tr>
+            <td>HANDLED DGROUP TYPE</td>
+            <td>{{workers.dhandletype}}</td>
+        </tr>
+        <tr>
+            <td>DGROUP DAY</td>
+            <td>{{workers.dhandleday}}</td>
+        </tr>
+        <tr>
+            <td>DGROUP TIME</td>
+            <td>{{workers.dhandletime}}</td>
+        </tr>
+        <tr>
+            <td>DGROUP VENUE</td>
+            <td>{{workers.dhandlevenue}}</td>
+        </tr>
+    </table>
+    <table class="table table-bordered">
+        <tr>
+            <td>OTHER MINISTRY:</td>
+            <td>{{workers.oministry}}</td>
+        </tr>
+    </table>
+    <table class="table table-bordered">
+        <h4>HOST TEAM GROUP PROFILE</h4>
+        <tr>
+            <td>BACKGROUND IN USHERING PRIOR TO JOINING HOST TEAM MINISTRY (LAST ATTENDED)</td>
+            <td>{{workers.pastministry}}</td>
+        </tr>
+        <tr>
+            <td>New Worker Orientation Training Completion Date</td>
+            <td>{{workers.trainingdate}}</td>
+        </tr>
+        <tr>
+            <td>DATE of First Ushering Duty Day</td>
+            <td>{{workers.firstduty}}</td>
+        </tr>
+        <tr>
+            <td>CLUSTER NAME</td>
+            <td>{{workers.clustername}}</td>
+        </tr>
+        <tr>
+            <td>CLUSTER HEAD</td>
+            <td>{{workers.clusterhead}}</td>
+        </tr>
+        <tr>
+            <td>SEGMENT</td>
+            <td>{{workers.segment}}</td>
+        </tr>
+        <tr>
+            <td>SEGMENT HEAD</td>
+            <td>{{workers.segmenthead}}</td>
+        </tr>
+        <tr>
+            <td>SEGMENT LEADER</td>
+            <td>{{workers.segmentleader}}</td>
+        </tr>
+        <tr>
+            <td>TIME</td>
+            <td>{{workers.time}}</td>
+        </tr>
+        <tr>
+            <td>HT POSITON</td>
+            <td>{{workers.htposition}}</td>
+        </tr>
+    </table>
     <div class="row">
         <div class="col-md-12">
             <div class="pull-right">

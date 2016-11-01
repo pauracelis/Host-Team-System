@@ -8,14 +8,18 @@
             <tr>
                 <th ng-click="sort('fname')"><span class="glyphicon sort-icon" ng-show="sortKey == 'fname'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span> First Name</th>
                 <th ng-click="sort('lname')"><span class="glyphicon sort-icon" ng-show="sortKey == 'lname'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span> Last Name</th>
-                <th ng-click="sort('nickname')"><span class="glyphicon sort-icon" ng-show="sortKey == 'nickname'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span>Nickname</th>
                 <th ng-click="sort('dgroup')"><span class="glyphicon sort-icon" ng-show="sortKey == 'dgroup'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span>DGROUP TYPE:</th>
+                <th ng-click="sort('dgroup')"><span class="glyphicon sort-icon" ng-show="sortKey == 'clustername'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span>CLUSTER NAME</th>
+                <th ng-click="sort('dgroup')"><span class="glyphicon sort-icon" ng-show="sortKey == 'htposition'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span>HT Position</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="worker in workers | orderBy:sortKey:reverse | filter:search" ng-click="view(worker._id)">
                 <td>{{worker.fname}}</td>
                 <td>{{worker.lname}}</td>
+                <td>{{worker.dgroup}}</td>
+                <td>{{worker.clustername}}</td>
+                <td>{{worker.htpositon}}</td>
             </tr>
             <tr ng-show="workers.length == 0">
                 <td colspan="2">No workers added yet!</td>
