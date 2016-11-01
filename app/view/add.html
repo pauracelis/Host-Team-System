@@ -78,11 +78,11 @@
 
             <label>I AM A</label>
             <div class="form-group">
-            <label ng-repeat="group in dgroup"><input type="checkbox" checklist-model="selected.dgroup" checklist-value="group"  /> {{group.name}}<br/> </label>
+            <label ng-repeat="group in dgroup"><input type="checkbox" checklist-model="selected.workers.dgroup" checklist-value="group"  /> {{group.name}}<br/> </label>
             {{selected.dgroup}}   
             </div>
             <div class="form-group">
-            <select ng-model="itemSelected" ng-options="value.name as value.name for value in dtype" required>
+            <select class="form-control" ng-model="itemSelected" ng-options="value.name as value.name for value in dtype" required>
             <option value="" disabled selected>SELECT D-GROUP TYPE</option>
             </select>      
             </div>
@@ -101,7 +101,7 @@
 
             <div class="form-group">
             <label for="dgrouptype">DGROUP DAY</label>
-            <select class="form-control" id="dgrouptype" ng-model="workers.dschedday">
+            <select class="form-control" id="dgrouptype" ng-model="itemSelected2" ng-options= "value.name as value.name for value in dschedday">
             <option value="" disabled selected>Select DAY</option>
             </select>
             </div>
@@ -110,6 +110,7 @@
             <div class="input-group bootstrap-timepicker timepicker">
             DGROUP time:<input id="timepicker1" type="text" class="form-control input-small">
             <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+
             </div>
             <div class="form-group">
             VENUE:  <input class="form-control" placeholder="VENUE" ng-model="workers.dvenue" ng-change="noSpace()">
@@ -119,34 +120,27 @@
             </div>
             <legend>DGROUP PROFILE OF HT WORKER AS A DGROUP LEADER</legend>
             <div class="form-group">
+
             <label for="dhandletype">DGROUP TYPE</label>
-            <select class="form-control" id="dhandletype" ng-model="workers.dhandletype">
+            <select class="form-control" id="dhandletype" ng-model="itemSelected3" ng-options="value.name as value.name for value in dhandletype">
             <option value="" disabled selected>Select DGROUP</option>
-            <option>Couples</option>
-            <option>Youth-Ladies</option>
-            <option>Youth-Men</option>
-            <option>All Men</option>
-            <option>All Women</option>
-            <option>Mixed</option>
             </select>
             </div>
+
             <div class="form-group">
             <label for="dhandleday">DGROUP DAY</label>
-            <select class="form-control" id="dhandleday" ng-model="workers.dhandleday">
+            <select class="form-control" id="dhandleday" ng-model="itemSelected4" ng-options="value.name as value.name for value in dhandleday">
             <option value="" disabled selected>Select DAY</option>
-            <option>MONDAY</option>
-            <option>TUESDAY</option>
-            <option>WEDNESDAY</option>
-            <option>THURSDAY</option>
-            <option>FRIDAY</option>
-            <option>SATURDAY</option>
-            <option>SUNDAY</option>
             </select>
             </div>  
+
+
             <div class="input-group bootstrap-timepicker timepicker">
             DGROUP time:<input id="dhandletime" type="text" class="form-control input-small">
             <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
             </div>
+
+
             <div class="form-group">
             VENUE:  <input class="form-control" placeholder="VENUE" ng-model="workers.dhandlevenue" ng-change="noSpace()">
             </div>
@@ -158,11 +152,15 @@
             BACKGROUND IN USHERING PRIOR TO JOINING HOST TEAM MINISTRY
             (LAST ATTENDED)  <input class="form-control" placeholder="BACKGROUND IN USHERING" ng-model="workers.pastministry" ng-change="noSpace()">
             </div>
+
             <div class="form-group">
             New Worker Orientation Training Completion Date:    <input type="date" class="form-control" placeholder="MM/DD/YYYY" ng-model="workers.trainingdate" ng-change="noSpace()">
             </div>
+
+
             <div class="form-group">
             DATE of First Ushering Duty Day:    <input type="date" class="form-control" placeholder="MM/DD/YYYY" ng-model="workers.firstduty" ng-change="noSpace()">
+
             </div>
             <div class="form-group">
             <label for="clustername">CLUSTER NAME</label>

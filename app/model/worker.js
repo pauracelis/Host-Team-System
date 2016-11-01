@@ -48,8 +48,14 @@ var workerSchema = mongoose.Schema({
     },
     dvenue: String, 
     apastor: String,
-    dhandletype: String,
-    dhandleday: String,
+    dhandletype: {
+        id: Number,
+        name: String
+    },
+    dhandleday: {
+         id: Number,
+        name: String
+    },
     dhandletime:{
         type: Date
     },

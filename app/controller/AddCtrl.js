@@ -9,7 +9,7 @@ angular.module('app').controller('AddController', function($scope, $http, $locat
     ];
     
     $scope.dtype = [
-        {id:1, name: "Couples", disabled: false},
+        {id:1, name:'Couples', disabled: false},
         {id:2, name:'Youth-Ladies', disabled: false},
         {id:3, name:'Youth-Men', disabled:false},
         {id:4, name:'All Men', disabled:false},
@@ -18,22 +18,44 @@ angular.module('app').controller('AddController', function($scope, $http, $locat
 
     ];
 
-    // $scope.dschedday = [
-    //     {id:1, name: "MONDAY", disabled: false},
-    //     {id:2, name:'TUESDAY', disabled: false},
-    //     {id:3, name:'WEDNESDAY', disabled:false},
-    //     {id:4, name:'THURSDAY', disabled:false},
-    //     {id:5, name:'FRIDAY', disabled:false},
-    //     {id:6, name:'SATURDAY', disabled:false},
-    //     {id:7, name:'SUNDAY', disabled:false}
-    // ];
+    $scope.dschedday = [
+        {id:1, name:'MONDAY', disabled: false},
+        {id:2, name:'TUESDAY', disabled: false},
+        {id:3, name:'WEDNESDAY', disabled:false},
+        {id:4, name:'THURSDAY', disabled:false},
+        {id:5, name:'FRIDAY', disabled:false},
+        {id:6, name:'SATURDAY', disabled:false},
+        {id:7, name:'SUNDAY', disabled:false}
+    ];
 
-        $scope.selected = {
+    $scope.dhandletype = [
+        {id:1, name:'Couples', disabled: false},
+        {id:2, name:'Youth-Ladies', disabled: false},
+        {id:3, name:'Youth-Men', disabled:false},
+        {id:4, name:'All Men', disabled:false},
+        {id:5, name:'All Women', disabled:false},
+        {id:6, name:'Mixed', disabled:false}
+    ];
+
+    $scope.dhandleday = [
+        {id:1, name:'MONDAY', disabled: false},
+        {id:2, name:'TUESDAY', disabled: false},
+        {id:3, name:'WEDNESDAY', disabled:false},
+        {id:4, name:'THURSDAY', disabled:false},
+        {id:5, name:'FRIDAY', disabled:false},
+        {id:6, name:'SATURDAY', disabled:false},
+        {id:7, name:'SUNDAY', disabled:false}
+
+    ];
+    $scope.selected = {
             dgroup: []
-        };
+    };
 
     $scope.itemSelected = $scope.dtype[0];
-    // $scope.itemSelected2 = $scope.dschedday[0];
+    $scope.itemSelected2 = $scope.dschedday[0];
+    $scope.itemSelected3 = $scope.dhandletype[0];
+    $scope.itemSelected4 = $scope.dhandleday[0];
+
 
     $scope.save = function() {
         $http.post('/api', $scope.workers).success(function(data) {
@@ -46,6 +68,9 @@ angular.module('app').controller('AddController', function($scope, $http, $locat
         });
     };
 
+    // $scope.getVal = function(){
+    //     $scope.workers.dgroup = $scope.dgroup.getElementsByTagName('')
+    // }
     // $scope.noSpace = function() {
     //     $scope.workers.fname = $scope.workers.fname.split(' ').join('');
     //     $scope.workers.lname = $scope.workers.lname.split(' ').join('');
